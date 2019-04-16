@@ -15,7 +15,7 @@ function addAuthTokenToRequest(headers) {
 class ApiBase {
   constructor() {
     this.ditterAxios = axios.create({
-      baseURL: 'http://localhost:8000/api/v1',
+      baseURL: 'https://ditter-backend.herokuapp.com/api/v1',
       headers: {
         'Content-Type': 'application/json',
       },
