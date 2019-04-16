@@ -1,0 +1,15 @@
+.landing{
+    padding: 80px 20px 20px 20px;
+}
+
+.navBar {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.noUnderline:hover {
+    text-decoration: none;
+}

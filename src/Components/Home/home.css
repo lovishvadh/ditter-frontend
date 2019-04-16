@@ -1,0 +1,50 @@
+.home {
+    background: #111;
+    min-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+}
+
+.formContainer {
+    background: #343a40;
+    color: #fff;
+    border-radius: 10px;
+    left: 25%;
+    right: 25%;
+    top: 10%;
+    bottom: 10%;
+    position: absolute;
+    padding: 20px;
+}
+
+@media (max-width: 576px) {
+    .formContainer {
+        left: 5%;
+        right: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .formContainer {
+        left: 5%;
+        right: 5%;
+    }
+}
+
+@media (max-width: 992px) {
+    .formContainer {
+        left: 10%;
+        right: 10%;
+        top: 5%;
+        bottom: 5%;
+        overflow: scroll;
+}
+}
+
+.card-title {
+    font-size: 24px;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
