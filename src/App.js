@@ -29,11 +29,11 @@ class App extends Component {
           <PrivateRoute authed={this.isLoggedIn()} key="username-default" path="/profile/:username" component={Landing} />
           <PrivateRoute authed={this.isLoggedIn()} key="users" path="/users/all" component={Landing} />
           <Route
-            path='/login'
+            path='/login' key="login"
             render={() => <Home  componentToLoad='Login' />}
           />
            <Route
-            path='/signup'
+            path='/signup' key="signup"
             render={() => <Home  componentToLoad='Sign Up' />}
           />
         </Router>
