@@ -9,7 +9,6 @@ import {
 import bgImage from '../../assets/images/lw.png';
 import profileImage from '../../assets/images/profile.jpg';
 import './userInfoCard.css';
-import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import DitterModal from '../DitterModal/ditterModal';
 import userService from '../../services/userService';
@@ -30,10 +29,9 @@ class UserInfoCard extends Component {
                     <Card.Body className="userNameInfo">
                         <span className="capitalize">{data.firstName} {data.lastName}</span>
                         <br/>
-                        <Link to={`/profile/${data.username}`}>
                         <span className="darkText">
                            @{data.username}
-                        </span></Link>
+                        </span>
                         </Card.Body>
                         <Card.Body className="darkText">
                         <Row>

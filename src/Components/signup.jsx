@@ -22,7 +22,7 @@ class SignUp extends Component {
         <Form onSubmit={this.handleFormSubmit}>
         <Row>
         <Col>
-        <Form.Group controlId="formBasicUsername">
+        <Form.Group controlId="formBasicFirstName">
             <Form.Label>First Name</Form.Label>
             <Form.Control name="firstName" onChange={(event) => this.handleUserInput(event)} type="text" placeholder="Enter first name" />
             <Form.Text className="text-muted">
@@ -30,7 +30,7 @@ class SignUp extends Component {
         </Form.Group> 
         </Col>
         <Col>
-         <Form.Group controlId="formBasicUsername">
+         <Form.Group controlId="formBasicLastName">
             <Form.Label>Last Name</Form.Label>
             <Form.Control name="lastName" onChange={(event) => this.handleUserInput(event)} type="text" placeholder="Enter last name" />
             <Form.Text className="text-muted">
@@ -103,6 +103,7 @@ class SignUp extends Component {
             }));
         if(response.status) {
             toast.success('Sign up successfull. Please login.');
+            this.props.history.push('/login');
         } else {
             response.data.errors.forEach((err) => {
                 toast.error(err);

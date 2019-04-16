@@ -34,7 +34,7 @@ class Login extends Component {
               Login
             </Button>
             <br />
-            Not registered yet?<Link to={"/signup"}><Card.Link> Register</Card.Link></Link>
+            Not registered yet?<Link to={"/signup"}> Register</Link>
           </Form> 
           );
     }
@@ -66,6 +66,7 @@ class Login extends Component {
           LocalStorage.set(Keys.username, this.state.username);
           LocalStorage.set(Keys.jwtToken, data.token);
           toast.success('Login Successfull');
+          this.props.history.push('/');
           this.props.renderLanding();
         } else {
           data.errors.forEach((err) => {
