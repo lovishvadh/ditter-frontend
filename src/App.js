@@ -8,6 +8,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import LocalStorage, {Keys} from './utils/localStorage';
 import {  Redirect } from 'react-router-dom';
+import NoMatch from './Components/NoMatch/noMatch';
 
 class App extends Component {
   render() {
@@ -36,6 +37,7 @@ class App extends Component {
             path='/signup' key="signup"
             render={() => <Home  componentToLoad='Sign Up' />}
           />
+          <Route component={NoMatch} />
         </Router>
       </div>
     );
